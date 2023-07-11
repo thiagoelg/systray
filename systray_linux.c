@@ -9,10 +9,10 @@
 // #include <libayatana-appindicator/app-indicator.h>
 // #endif
 
-#if __has_include(<libappindicator/app-indicator.h>)
-#include <libappindicator/app-indicator.h>
+#if __has_include("libayatana-appindicator/app-indicator.h") && __has_include(<libayatana-appindicator/app-indicator.h>)
+	#include <libayatana-appindicator/app-indicator.h>
 #else 
-#include <libayatana-appindicator/app-indicator.h>
+	#include <libappindicator/app-indicator.h>
 #endif
 
 #include "systray.h"
